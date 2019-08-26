@@ -126,7 +126,7 @@ class IndexController extends Controller
     	// 获取某一列
     	$list=$tb->where('id',1)->first();
     	*/
-    	$list=$tb->where('sex',1)->orWhere('age','>',18)->select('name')->addSelect('age')->groupBy('sex')->get();
+    	$list=$tb->where('sex',1)->orWhere('age','>',18)->select('name')->addSelect('age')->get();
 
 
     	dd($list);

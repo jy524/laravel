@@ -65,13 +65,19 @@ Route::group(['prefix'=>'Test'],function(){
 Route::group(['prefix'=>'Home'],function(){
 	Route::group(['prefix'=>'Index'],function(){
 		Route::get('index','Home\IndexController@index');
+		Route::get('page1','Home\IndexController@page1');
+		Route::get('page2','Home\IndexController@page2');
+		Route::get('page3','Home\IndexController@page3');
+		Route::get('page4','Home\IndexController@page4');
+		Route::match(['get','post'],'page5','Home\IndexController@page5');
+		Route::match(['get','post'],'page6','Home\IndexController@page6');
+		Route::match(['get','post'],'page7','Home\IndexController@page7');
+		Route::match(['get','post'],'page8','Home\IndexController@page8');
+		Route::match(['get','post'],'page9','Home\IndexController@page9');
+		Route::get('page10','Home\IndexController@page10');
 	});
 });
-function RegPath($path='',$arr=[]){
-	foreach ($arr as $k => $v) {
-		Route::get($v,$path.$v);
-	}
-}
+
 Route::group(['prefix'=>'Admin'],function(){
 	Route::group(['prefix'=>'Index'],function(){
 		Route::get('index','Admin\IndexController@index');
