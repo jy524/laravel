@@ -75,6 +75,14 @@ Route::group(['prefix'=>'Home'],function(){
 		Route::match(['get','post'],'page8','Home\IndexController@page8');
 		Route::match(['get','post'],'page9','Home\IndexController@page9');
 		Route::get('page10','Home\IndexController@page10');
+		Route::match(['get','post'],'page11','Home\IndexController@page11');
+		Route::get('page12','Home\IndexController@page12');
+		Route::get('page13','Home\IndexController@page13');
+		Route::get('page14','Home\IndexController@page14');
+		Route::get('page15','Home\IndexController@page15');
+		Route::get('page16','Home\IndexController@page16');
+		Route::get('page17','Home\IndexController@page17');
+		Route::get('page18','Home\IndexController@page18');
 	});
 });
 

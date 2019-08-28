@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Mews\Captcha\CaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -227,6 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         //自己添加的
         'Input' => Illuminate\Support\Facades\Input::class,
+        'Captcha' => 'Mews\Captcha\Facades\Captcha',
 
     ],
 
