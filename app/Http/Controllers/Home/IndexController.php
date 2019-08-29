@@ -241,7 +241,13 @@ class IndexController extends Controller
 
     //多对多的模型关联查询
     public function page17(){
-
+        $list=Article::get();
+        foreach ($list as $k => $v) {
+            echo $v->id.':'.$v->title.'(标签有这些)<br/>';
+            foreach ($v->tag as $k2 => $v2) {
+                echo '&emsp;'.$v2->id.':'.$v2->tag.'<br/>';
+            }
+        }
     }
 
     public function page18(){

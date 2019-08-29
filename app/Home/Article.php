@@ -18,4 +18,9 @@ class Article extends Model
     public function comment(){
     	return $this->hasMany('App\Home\comment','article_id','id');
     }
+
+    // 多对多的关联模型方法
+    public function tag(){
+    	return $this->belongsToMany('App\Home\Tag','relation','article_id','tag_id');
+    }
 }
